@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./home.css">
+
+  <title>Dashboard</title>
+</head>
+
+<body>
+  <aside>
+    <nav>
+      <section>
+        <h1>FinTech</h1>
+      </section>
+      <div class="line"></div>
+      <section>
+        <ul>
+          <li>Dashboard</li>
+          <li>receitas</li>
+          <li>despesas</li>
+          <li>Investimentos</li>
+          <li>Contas bancárias</li>
+          <li>Cartões</li>
+        </ul>
+      </section>
+      <div class="line"></div>
+      <section>
+        <ul>
+          <li>Suporte</li>
+          <li>Configuração</li>
+          <li>Sair</li>
+        </ul>
+      </section>
+    </nav>
+  </aside>
+
+  <main>
+    <header>
+      <p>DashBoard</p>
+      <div>
+        <p>ArandasNyan</p>
+        <img src="../../assets/profile/user-image/cat.jpg" alt="Imagem">
+      </div>
+    </header>
+
+    <section>
+      <article>
+        <div>
+          <h3>Conta</h3>
+          <p>R$0,00</p>
+        </div>
+        <div>
+          <h3>Receitas</h3>
+          <p>R$0,00</p>
+        </div>
+        <div>
+          <h3>Despesas</h3>
+          <p>R$0,00</p>
+        </div>
+        <div>
+          <h3>Ultima Transação</h3>
+          <p>R$0,00</p>
+        </div>
+      </article>
+
+      <article class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Ação</th>
+              <th>Pagamento</th>
+              <th>Valor</th>
+              <th>Data</th>
+              <th> </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Ação" data-fulltext="Comprei coisas no supermercado e fui assaltar um banco">
+                Comprei coisas no supermercado e fui assaltar um banco
+              </td>
+              <td data-label="Forma de pagamento">Cartão de Crédito</td>
+              <td data-label="Valor">$100.00</td>
+              <td data-label="Data">21 / 11/ 2023</td>
+              <td data-label="Ações">
+                <button class="btn" onclick="deleteRow(this)">
+                  <svg viewBox="0 0 15 17.5" height="17.5" width="15" xmlns="http://www.w3.org/2000/svg" class="icon">
+                    <path transform="translate(-2.5 -1.25)"
+                      d="M15,18.75H5A1.251,1.251,0,0,1,3.75,17.5V5H2.5V3.75h15V5H16.25V17.5A1.251,1.251,0,0,1,15,18.75ZM5,5V17.5H15V5Zm7.5,10H11.25V7.5H12.5V15ZM8.75,15H7.5V7.5H8.75V15ZM12.5,2.5h-5V1.25h5V2.5Z"
+                      id="Fill"></path>
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <!-- Adicione mais linhas conforme necessário -->
+          </tbody>
+        </table>
+      </article>
+    </section>
+  </main>
+  <div class="alert-container">
+    <h1>Este site, não tem suporte para dispositivos celulares e tablets</h1>
+    <p>Em breve será introduzido um sistema para dar suporte a dispositivos adversos</p>
+  </div>
+  <script>
+    function deleteRow(btn) {
+      // Função para deletar a linha da tabela
+      var row = btn.parentNode.parentNode;
+      row.parentNode.removeChild(row);
+    }
+  </script>
+</body>
+
+</html>
