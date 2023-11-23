@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/9e3e48852b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./styles-index.css">
+  <title>Dashboard</title>
+</head>
+
+<body>
+  <aside class="aside-nav">
+    <nav class="nav">
+      <section class="logo">
+        <h1 class="text-logo">FinTech</h1>
+      </section>
+      <div class="line"></div>
+      <section class="nav-list">
+        <ul class="nav-list-container-items">
+          <li class="nav-list-item">Dashboard</li>
+          <li class="nav-list-item">receitas</li>
+          <li class="nav-list-item">despesas</li>
+          <li class="nav-list-item">Investimentos</li>
+          <li class="nav-list-item">Contas bancárias</li>
+          <li class="nav-list-item">Cartões</li>
+        </ul>
+      </section>
+      <div class="line"></div>
+      <section class="nav-list">
+        <ul class="nav-list-container-items">
+          <li class="nav-list-item">Suporte</li>
+          <li class="nav-list-item">Configuração</li>
+          <li class="nav-list-item">Sair</li>
+        </ul>
+      </section>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="main-header">
+      <p class="header-title">Dashboard</p>
+      <div class="user-content">
+        <p class="user-name">ArandasNyan</p>
+        <img src="../../assets/profile/user-image/cat.jpg" alt="" class="user-image">
+      </div>
+    </header>
+    <section class="dashboard">
+      <article class="dashboard-content">
+        <!-- seção de informação do usuário -->
+        <section class="dashboard-summary">
+          <div class="summary-info">
+            <h2 class="summary-title-info">Situação Financeira</h2>
+            <p class="summary-description-info">Resumo financeiro</p>
+          </div>
+          <div class="summary-details">
+            <article class="financial-section wallet-details">
+              <div class="icon-container">
+                <svg class="icon" stroke-width="1.15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  color="#000000">
+                  <path
+                    d="M19 20H5C3.89543 20 3 19.1046 3 18V9C3 7.89543 3.89543 7 5 7H19C20.1046 7 21 7.89543 21 9V18C21 19.1046 20.1046 20 19 20Z"
+                    class="wallet-path" stroke-width="1.15">
+                  </path>
+                  <path
+                    d="M16.5 14C16.2239 14 16 13.7761 16 13.5C16 13.2239 16.2239 13 16.5 13C16.7761 13 17 13.2239 17 13.5C17 13.7761 16.7761 14 16.5 14Z"
+                    fill="#000000" class="wallet-path" stroke-width="1.15" stroke-linecap="round"
+                    stroke-linejoin="round">
+                  </path>
+                  <path
+                    d="M18 7V5.60322C18 4.28916 16.7544 3.33217 15.4847 3.67075L4.48467 6.60409C3.60917 6.83756 3 7.63046 3 8.53656V9"
+                    class="wallet-path" stroke-width="1.15">
+                  </path>
+                </svg>
+              </div>
+              <div class="details-container">
+                <p class="amount">$5.738,91</p>
+                <p class="label">Saldo</p>
+                <p class="percentage wallet">
+                  +15% do último mês
+                </p>
+              </div>
+            </article>
+            <article class="financial-section economy-details">
+              <div class="icon-container">
+                <svg class="icon economy" viewBox="0 0 24 24" stroke-width="1.15" fill="none">
+                  <path
+                    d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z"
+                    class="economy-path" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                    d="M22 17.2798C22 17.8812 21.7625 18.4588 21.3383 18.8861C20.3619 19.8701 19.415 20.8961 18.4021 21.8443C18.17 22.0585 17.8017 22.0507 17.5795 21.8268L14.6615 18.8861C13.7795 17.9972 13.7795 16.5623 14.6615 15.6734C15.5522 14.7758 17.0032 14.7758 17.8938 15.6734L17.9999 15.7803L18.1059 15.6734C18.533 15.2429 19.1146 15 19.7221 15C20.3297 15 20.9113 15.2428 21.3383 15.6734C21.7625 16.1007 22 16.6784 22 17.2798Z"
+                    class="economy-path" stroke-width="1.15" stroke-linejoin="round">
+                  </path>
+                  <path d="M5 20V19C5 15.134 8.13401 12 12 12C13.0736 12 14.0907 12.2417 15 12.6736"
+                    class="economy-path" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                </svg>
+              </div>
+              <div class="details-container">
+                <p class="amount">$58,35</p>
+                <p class="label">Economia</p>
+                <p class="percentage economy">
+                  +2.7% do último mês
+                </p>
+              </div>
+            </article>
+            <article class="financial-section expense-details">
+              <div class="icon-container">
+                <svg class="icon" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  color="#000000">
+                  <path d="M4 10L12 18L15 15L20 20" class="expense-path" stroke-width="1.15" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path d="M16 4V12M16 12L19 9M16 12L13 9" class="expense-path" stroke-width="1.15"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <div class="details-container">
+                <p class="amount">$229,18</p>
+                <p class="label">Despesas</p>
+                <p class="percentage expense">
+                  -5.38% do último mês
+                </p>
+              </div>
+            </article>
+            <article class="financial-section transaction-details">
+              <div class="icon-container">
+                <svg class="icon" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  color="#000000">
+                  <path d="M14 19L17 22L22 17" class="transaction-path" stroke-width="1.15" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path d="M17 14V4M17 4L20 7M17 4L14 7" class="transaction-path" stroke-width="1.15"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M7 4V20M7 20L10 17M7 20L4 17" class="transaction-path" stroke-width="1.15"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <div class="details-container">
+                <p class="amount">$1.450,80</p>
+                <p class="label">Transações</p>
+                <p class="percentage transaction">
+                  +1450.8% do último mês
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- seção de notificação-->
+        <section class="dashboard-notify">
+          <div class="notify-container-info">
+            <h2 class="notify-title-info">
+              Notificações
+            </h2>
+          </div>
+          <div class="notify-container-list">
+            <ul class="notify-list">
+              <li class="notify non-viewed">
+                <div class="notify-container-title">
+                  <p class="notify-title">
+                    Bitcoin
+                  </p>
+                  <p class="hour-count">
+                    há 9 horas
+                  </p>
+                </div>
+                <div class="notify-container-content">
+                  <p class="notify-content">
+                    Uma era incrível estar a vir não perca tempo!
+                  </p>
+                </div>
+              </li>
+              <li class="notify">
+                <div class="notify-container-title">
+                  <p class="notify-title">
+                    Ethereum
+                  </p>
+                  <p class="hour-count">
+                    há 14 horas
+                  </p>
+                </div>
+                <div class="notify-container-content">
+                  <p class="notify-content">
+                    Desenvolvedora lança contrato promissor
+                  </p>
+                </div>
+              </li>
+              <li class="notify">
+                <div class="notify-container-title">
+                  <p class="notify-title">
+                    Polygon
+                  </p>
+                  <p class="hour-count">
+                    há 9 horas
+                  </p>
+                </div>
+                <div class="notify-container-content">
+                  <p class="notify-content">
+                    Moeda assusta com resultado astronômico.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
+
+      <article class="dashboard-content">
+        <!-- Seção de Investimento -->
+        <section class="investment-section">
+          <h2 class="investment-title">Investimentos</h2>
+          <div class="table-container">
+            <table class="investment-table">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Tipo</th>
+                  <th>Investido</th>
+                  <th>Data</th>
+                  <th>Rendimento</th>
+                  <th>Status</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="investment-name">Investimento 1</td>
+                  <td class="investment-type">Ações</td>
+                  <td class="investment-amount">$1,000.00</td>
+                  <td class="investment-date">01/01/2023</td>
+                  <td class="investment-percentage">5%</td>
+                  <td class="investment-status">Ativo</td>
+                  <td>
+                    <button class="edit-button">Editar</button>
+                    <button class="delete-button">Excluir</button>
+                  </td>
+                </tr>
+                <!-- Outras linhas aqui... -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </article>
+
+      <!-- Seção de Cartão e Conta Bancária -->
+      <article class="dashboard-content">
+        <!-- Detalhes do Cartão -->
+        <section class="card-details-section">
+          <h2 class="section-title">Detalhes do Cartão</h2>
+          <div class="card-details-container">
+            <div class="card-detail">
+              <span class="detail-label">Número</span>
+              <span class="detail-value">9876 **** **** 1234</span>
+            </div>
+            <div class="card-detail">
+              <span class="detail-label">Validade</span>
+              <span class="detail-value">12/**</span>
+            </div>
+            <div class="card-detail">
+              <span class="detail-label">Nome</span>
+              <span class="detail-value">Emmanoel Vieira</span>
+            </div>
+            <div class="card-detail">
+              <span class="detail-label">tipo</span>
+              <span class="detail-value">Premium</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Detalhes da Conta Bancária -->
+        <section class="bank-details-section">
+          <h2 class="section-title">Detalhes da Conta Bancária</h2>
+          <div class="bank-details-container">
+            <div class="bank-detail">
+              <span class="detail-label">Nome</span>
+              <span class="detail-value">Emmanoel Vieira</span>
+            </div>
+            <div class="bank-detail">
+              <span class="detail-label">Agência</span>
+              <span class="detail-value">1234</span>
+            </div>
+            <div class="bank-detail">
+              <span class="detail-label">Banco</span>
+              <span class="detail-value">C6 Bank</span>
+            </div>
+            <div class="bank-detail">
+              <span class="detail-label">Saldo</span>
+              <span class="detail-value">$10,000.00</span>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <article class="dashboard-content">
+        <section class="expenses-section">
+          <h2 class="section-title">Despesas</h2>
+          <div class="table-container">
+            <table class="expenses-table">
+              <thead>
+                <tr>
+                  <th>Descrição</th>
+                  <th>Valor</th>
+                  <th>Data</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Linha de exemplo (substituir com dados dinâmicos) -->
+                <tr>
+                  <td class="expense-name">Despesa 1</td>
+                  <td class="expense-amount">$50.00</td>
+                  <td class="expense-date">01/02/2023</td>
+                  <td class="expense-actions">
+                    <button class="complete-button">Concluir</button>
+                    <button class="delete-button">Excluir</button>
+                  </td>
+                </tr>
+                <!-- Outras linhas aqui... -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </article>
+    </section>
+  </main>
+  <script src="./index.js"></script>
+</body>
+
+</html>

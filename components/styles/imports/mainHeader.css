@@ -1,0 +1,36 @@
+
+.main-header {
+  --height-header-size: 60px;
+  height: var(--height-header-size);
+  width: var(--w-full);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--rs-gray-300);
+  padding: var(--padding-df)
+}
+
+.user-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.user-name {
+  font-size: var(--text-sm);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.user-image {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

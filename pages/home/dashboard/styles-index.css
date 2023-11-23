@@ -1,0 +1,422 @@
+@import url(../../components/styles/imports/default-styles.css);
+
+/*=========== Import Styles ==============*/
+@import url(../../../components/styles/imports/scroll-styles.css);
+@import url(../../../components/styles/imports/aside-style.css);
+@import url(../../../components/styles/imports/mainHeader.css);
+
+:root {
+  font-family: var(--poppins);
+  font-size: var(--text-base);
+}
+
+/*============== All Elements Styles ==============*/
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  list-style: var(--no-list-style);
+}
+
+/*============== Body Styles ==============*/
+body {
+  min-height: var(--h-full);
+  width: var(--w-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--rs-gray-50);
+}
+
+/*============== Main Styles ==============*/
+.main {
+  height: var(--h-full-screen);
+  width: calc(100vw - var(--width-aside));
+  display: flex;
+  flex-direction: column;
+  padding: 0px var(--padding-df);
+  gap: 8px;
+  overflow-y: auto
+}
+
+/*============== Dashboard Styles ==============*/
+.dashboard {
+  height: auto;
+  width: var(--w-full);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-df);
+  gap: 24px;
+}
+
+/*============== Styles Dashboard Content ==============*/
+.dashboard-content {
+  width: var(--w-full);
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.dashboard-content section {
+  box-shadow: 3px 3px 7px var(--rs-gray-300);
+}
+
+/*============== Styles Dashboard Summary ==============*/
+.dashboard-summary {
+  height: var(--height-section-size);
+  width: 70%;
+  background: var(--rs-gray-150);
+  border-radius: var(--bd-radius-default);
+  padding: var(--padding-df);
+}
+
+/*============== Styles Summary Info ==============*/
+.summary-info {
+  --height-summary-info: 35%;
+  height: var(--height-summary-info);
+  width: var(--w-full);
+}
+
+.summary-title-info {
+  font-size: var(--text-xl);
+  font-weight: var(--medium);
+}
+
+.summary-description-info {
+  font-size: var(--text-sm);
+}
+
+/*============== Styles Details ==============*/
+.summary-details {
+  height: 65%;
+  width: var(--w-full);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*============== Styles Financial Section ==============*/
+.financial-section {
+  height: var(--h-full);
+  width: 20%;
+  background: var(--rs-gray-100);
+  box-shadow: 3px 3px 7px var(--rs-gray-300);
+  border-radius: var(--bd-radius-default);
+  padding: var(--padding-df);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+/*============== Styles Details Container ==============*/
+.details-container {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.amount {
+  font-size: var(--text-sm);
+  font-weight: var(--semi-bold);
+}
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: var(--regular);
+}
+
+.percentage {
+  font-size: calc(var(--text-xs) - 2px);
+}
+
+/*============== Styles Icon Container ==============*/
+.icon-container {
+  height: 40%;
+  width: 100%;
+}
+
+/*============== Styles Size & Color Icon ==============*/
+.financial-section .icon {
+  --icon-size: 35px;
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.wallet,
+.wallet-path {
+  color: var(--stroke-wallet-color);
+  stroke: var(--stroke-wallet-color);
+}
+
+.economy,
+.economy-path {
+  color: vaR(--stroke-economy-color);
+  stroke: var(--stroke-economy-color);
+}
+
+.expense,
+.expense-path {
+  color: var(--stroke-expense-color);
+  stroke: var(--stroke-expense-color);
+}
+
+.transaction,
+.transaction-path {
+  color: var(--stroke-transaction-color);
+  stroke: var(--stroke-transaction-color)
+}
+
+/*============== Styles Dashboard notifications ==============*/
+.dashboard-notify {
+  height: var(--height-section-size);
+  width: 30%;
+  background: var(--rs-gray-150);
+  border-radius: var(--bd-radius-default);
+  padding: var(--padding-df);
+}
+
+.notify-container-info {
+  --notify-container-info: 15%;
+  height: var(--notify-container-info);
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.notify-title-info {
+  font-size: var(--text-xl);
+  font-weight: var(--medium);
+}
+
+.notify-container-list {
+  height: 85%;
+  width: 100%;
+}
+
+.notify-list {
+  height: var(--h-full);
+  width: var(--w-full);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-right: 4px;
+  overflow-y: auto;
+}
+
+.notify {
+  height: 50px;
+  width: var(--w-full);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &:hover {
+    background-color: var(--rs-gray-200);
+  }
+
+  padding: 0px 4px;
+}
+
+.non-viewed {
+  border-left: 3.5px solid var(--rs-gray-700);
+  background: var(--rs-gray-300);
+}
+
+.notify-container-title {
+  --notify-container-title-height: 20px;
+  height: var(--notify-container-title-height);
+  width: var(--w-full);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notify-title {
+  font-size: var(--text-base);
+}
+
+.hour-count {
+  font-size: var(--text-xs);
+}
+
+.notify-container-content {
+  height: calc(50px - var(--notify-container-title-height));
+  width: var(--w-full);
+}
+
+.notify-content {
+  font-size: calc(var(--text-xs) + 1px);
+}
+
+/*============== Styles Investment Section ==============*/
+.investment-section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: var(--padding-df);
+  box-shadow: 3px 3px 7px var(--rs-gray-300);
+  background: var(--rs-gray-150);
+  border-radius: var(--bd-radius-default);
+}
+
+.investment-title {
+  font-size: var(--text-xl);
+  font-weight: var(--medium);
+}
+
+/*============== Styles Investment Table ==============*/
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.investment-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.investment-table th,
+.investment-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid var(--rs-gray-300);
+}
+
+.investment-table th {
+  background-color: var(--rs-gray-100);
+}
+
+/*============== Styles Investment Table Header ==============*/
+.investment-table th {
+  position: sticky;
+  top: 0;
+  background-color: var(--rs-gray-150);
+  z-index: 2;
+}
+
+/*============== Styles Investment Table Actions ==============*/
+.edit-button,
+.delete-button,
+.complete-button {
+  cursor: pointer;
+  color: var(--white);
+  border: none;
+  padding: 8px;
+  border-radius: var(--bd-radius-default);
+  margin-right: 4px;
+
+  &:hover {
+    background-color: var(--rs-gray-300);
+  }
+}
+
+/*============== Styles Card and Bank Sections ==============*/
+.card-details-section {
+  width: 40%;
+  height: 100%;
+  background: var(--rs-gray-150);
+  border-radius: var(--bd-radius-default);
+  box-shadow: 3px 3px 7px var(--rs-gray-300);
+  padding: var(--padding-df);
+}
+
+.bank-details-section {
+  width: 60%;
+  height: 100%;
+  background: var(--rs-gray-150);
+  border-radius: var(--bd-radius-default);
+  box-shadow: 3px 3px 7px var(--rs-gray-300);
+  padding: var(--padding-df);
+}
+
+.section-title {
+  font-size: var(--text-xl);
+  font-weight: var(--medium);
+  margin-bottom: 16px;
+}
+
+.card-details-container,
+.bank-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-detail,
+.bank-detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-label,
+.detail-value {
+  font-size: var(--text-base);
+}
+
+.detail-label {
+  color: var(--rs-gray-700);
+}
+
+.detail-value {
+  font-weight: var(--semi-bold);
+}
+
+
+/*============== Styles Expenses Table ==============*/
+.expenses-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.expenses-table th,
+.expenses-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid var(--rs-gray-300);
+}
+
+.expenses-table th {
+  background-color: var(--rs-gray-100);
+}
+
+/*============== Styles Expenses Table Header ==============*/
+.expenses-table th {
+  position: sticky;
+  top: 0;
+  background-color: var(--rs-gray-150);
+  z-index: 2;
+}
+
+/*============== Styles Expenses Section ==============*/
+.expenses-section {
+  width: 100%;
+  height: auto;
+  background: var(--rs-gray-150);
+  border-radius: var(--bd-radius-default);
+  box-shadow: 3px 3px 7px var(--rs-gray-300);
+  padding: var(--padding-df);
+  margin-bottom: 24px;
+}
+
+/*============== Styles Section Title ==============*/
+.section-title {
+  width: 100%;
+  text-align: center;
+  font-size: var(--text-xl);
+  font-weight: var(--medium);
+  margin-bottom: 16px;
+}
