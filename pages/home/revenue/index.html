@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles-index.css">
+  <title>Despesas</title>
+</head>
+
+<body>
+  <aside class="aside-nav">
+    <nav class="nav">
+      <section class="logo">
+        <h1 class="text-logo">FinTech</h1>
+      </section>
+      <div class="line"></div>
+      <section class="nav-list">
+        <ul class="nav-list-container-items">
+          <li class="nav-list-item">Dashboard</li>
+          <li class="nav-list-item">Receitas</li>
+          <li class="nav-list-item">despesas</li>
+          <li class="nav-list-item">Investimentos</li>
+          <li class="nav-list-item">Contas bancárias</li>
+          <li class="nav-list-item">Cartões</li>
+        </ul>
+      </section>
+      <div class="line"></div>
+      <section class="nav-list">
+        <ul class="nav-list-container-items">
+          <li class="nav-list-item">Suporte</li>
+          <li class="nav-list-item">Configuração</li>
+          <li class="nav-list-item">Sair</li>
+        </ul>
+      </section>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="main-header">
+      <p class="header-title">Despesas</p>
+      <div class="user-content">
+        <p class="user-name">ArandasNyan</p>
+        <img src="../../../assets/profile/user-image/cat.jpg" alt="" class="user-image">
+      </div>
+    </header>
+    <section class="despesas">
+      <article class="despesas-content">
+        <!-- Seção de Resumo -->
+        <div class="summary-info">
+          <h2 class="summary-title-info">Resumo de despesas</h2>
+          <p class="summary-description-info">Veja suas despesas acumuladas</p>
+        </div>
+
+        <!-- Seção de Lista de Despesas -->
+        <section class="despesas-list">
+          <div class="despesas-list-header">
+            <h2 class="despesas-title">Lista de Despesas</h2>
+            <button class="add-despesa-button" id="addDespesaButton">Adicionar Despesa</button>
+          </div>
+          <div class="table-container">
+            <table class="despesas-table">
+              <thead>
+                <tr>
+                  <th>Descrição</th>
+                  <th>Valor</th>
+                  <th>Data</th>
+                  <th>Status</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="despesa-description">Aluguel</td>
+                  <td class="despesa-amount">$1,200.00</td>
+                  <td class="despesa-date">05/02/2023</td>
+                  <td class="despesa-status">Pendente</td>
+                  <td class="despesa-actions">
+                    <button class="edit-button" onclick="editDespesa(this)">Editar</button>
+                    <button class="concluir-button" onclick="concluirDespesa(this)">Concluir</button>
+                    <button class="delete-button" onclick="excluirDespesa(this)">Excluir</button>
+                  </td>
+                </tr>
+                <!-- Outras linhas aqui... -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </article>
+    </section>
+  </main>
+  <div id="addDespesasModal" class="modal">
+    <div class="modal-content">
+      <span id="closeButton" class="close">&times;</span>
+      <h2>Adicionar Despesas</h2>
+      <form id="addDespesasForm">
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" required>
+
+        <label for="valor">Valor:</label>
+        <input type="text" id="valor" pattern="^\d+(\.\d{1,2})?$" required>
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" required>
+
+        <button type="submit">Adicionar</button>
+      </form>
+    </div>
+  </div>
+  <div id="editDespesasModal" class="modal">
+    <div class="modal-content">
+      <span id="closeEditButton" class="close">&times;</span>
+      <h2>Editar Despesas</h2>
+      <form id="editDespesasForm">
+        <label for="editDescricao">Descrição:</label>
+        <input type="text" id="editDescricao" required>
+
+        <label for="editValor">Valor:</label>
+        <input type="text" id="editValor" pattern="^\d+(\.\d{1,2})?$" required>
+
+        <label for="editData">Data:</label>
+        <input type="date" id="editData" required>
+
+        <button id="editSubmitButton" type="submit">Salvar</button>
+      </form>
+    </div>
+  </div>
+  <script src="./scripts.js"></script>
+</body>
+
+</html>

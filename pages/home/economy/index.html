@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles-index.css">
+  <title>Receitas</title>
+</head>
+
+<body>
+  <aside class="aside-nav">
+    <nav class="nav">
+      <section class="logo">
+        <h1 class="text-logo">FinTech</h1>
+      </section>
+      <div class="line"></div>
+      <section class="nav-list">
+        <ul class="nav-list-container-items">
+          <li class="nav-list-item">Dashboard</li>
+          <li class="nav-list-item">receitas</li>
+          <li class="nav-list-item">despesas</li>
+          <li class="nav-list-item">Investimentos</li>
+          <li class="nav-list-item">Contas bancárias</li>
+          <li class="nav-list-item">Cartões</li>
+        </ul>
+      </section>
+      <div class="line"></div>
+      <section class="nav-list">
+        <ul class="nav-list-container-items">
+          <li class="nav-list-item">Suporte</li>
+          <li class="nav-list-item">Configuração</li>
+          <li class="nav-list-item">Sair</li>
+        </ul>
+      </section>
+    </nav>
+  </aside>
+  <main class="main">
+    <header class="main-header">
+      <p class="header-title">Receitas</p>
+      <div class="user-content">
+        <p class="user-name">ArandasNyan</p>
+        <img src="../../../assets/profile/user-image/cat.jpg" alt="" class="user-image">
+      </div>
+    </header>
+
+    <section class="receitas">
+      <article class="receitas-content">
+        <!-- Seção de Resumo -->
+        <section class="receitas-summary">
+          <div class="summary-info">
+            <h2 class="summary-title-info">Resumo de Receitas</h2>
+            <p class="summary-description-info">Veja suas receitas acumuladas</p>
+          </div>
+          <div class="summary-details">
+            <article class="financial-section total-details">
+              <div class="icon-container">
+                <svg class="icon" stroke-width="1.15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  color="#000000">
+                  <path
+                    d="M19 20H5C3.89543 20 3 19.1046 3 18V9C3 7.89543 3.89543 7 5 7H19C20.1046 7 21 7.89543 21 9V18C21 19.1046 20.1046 20 19 20Z"
+                    class="wallet-path" stroke-width="1.15">
+                  </path>
+                  <path
+                    d="M16.5 14C16.2239 14 16 13.7761 16 13.5C16 13.2239 16.2239 13 16.5 13C16.7761 13 17 13.2239 17 13.5C17 13.7761 16.7761 14 16.5 14Z"
+                    fill="#000000" class="wallet-path" stroke-width="1.15" stroke-linecap="round"
+                    stroke-linejoin="round">
+                  </path>
+                  <path
+                    d="M18 7V5.60322C18 4.28916 16.7544 3.33217 15.4847 3.67075L4.48467 6.60409C3.60917 6.83756 3 7.63046 3 8.53656V9"
+                    class="wallet-path" stroke-width="1.15">
+                  </path>
+                </svg>
+              </div>
+              <div class="details-container">
+                <p class="amount">$5.738,91</p>
+                <p class="label">Receitas Totais</p>
+                <p class="percentage total-receitas">
+                  +15% do último mês
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Seção de Lista de Receitas -->
+        <section class="receitas-list">
+          <div class="receitas-list-header">
+            <h2 class="receitas-title">Lista de Receitas</h2>
+            <button class="add-receita-button" id="addReceitaButton">Adicionar Receita</button>
+          </div>
+          <div class="table-container">
+            <table class="receitas-table">
+              <thead>
+                <tr>
+                  <th>Descrição</th>
+                  <th>Valor</th>
+                  <th>Data</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Outras linhas aqui... -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </article>
+    </section>
+  </main>
+  <div id="addReceitaModal" class="modal">
+    <div class="modal-content">
+      <span id="closeButton" class="close">&times;</span>
+      <h2>Adicionar Receita</h2>
+      <form id="addReceitaForm">
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" required>
+
+        <label for="valor">Valor:</label>
+        <input type="text" id="valor" pattern="^\d+(\.\d{1,2})?$" required>
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" required>
+
+        <button type="submit">Adicionar</button>
+      </form>
+    </div>
+  </div>
+  <div id="editReceitaModal" class="modal">
+    <div class="modal-content">
+      <span id="closeEditButton" class="close">&times;</span>
+      <h2>Editar Receita</h2>
+      <form id="editReceitaForm">
+        <label for="editDescricao">Descrição:</label>
+        <input type="text" id="editDescricao" required>
+
+        <label for="editValor">Valor:</label>
+        <input type="text" id="editValor" pattern="^\d+(\.\d{1,2})?$" required>
+
+        <label for="editData">Data:</label>
+        <input type="date" id="editData" required>
+
+        <button id="editSubmitButton" type="submit">Salvar</button>
+      </form>
+    </div>
+  </div>
+  <script src="./scripts.js"></script>
+</body>
+
+</html>
